@@ -56,3 +56,14 @@ res3 = a <= d;            //res3 é true
 boolean res4 = a==5;      //res4 é false
 res4 = a==10;             //res4 é true
 ```
+
+
+**Lógicos:** &&, ||
+
+```java
+boolean v1 = true;
+boolean v2 = false;
+
+boolean v3 = v1 && v2;    //v3 é false
+v3 = v1 || v2;            //v3 é true
+```
