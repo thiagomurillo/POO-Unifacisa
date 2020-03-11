@@ -7,5 +7,5 @@ Repositório contendo conceitos e exemplos de programas com orientação a objet
 
 [2 - Operadores](conteudo/Operadores.md).
 
-[3 - Estruturas de Repetição](conteudo/EstruturasDeRepeticao.md).
+[3 - Estruturas Condicionais](conteudo/EstruturasCondicionais.md).
 
