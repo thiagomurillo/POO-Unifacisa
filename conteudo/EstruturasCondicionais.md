@@ -27,7 +27,7 @@ else
 
 ## Switch - case
 
-O switch case tem as mesmas capacidades de um if else. No entanto, é notório que os programadores os utilizam com mais frequência para comparar uma variável a vários valores diferentes.
+O switch case tem as mesmas capacidades de um if else. No entanto, é notório que os programadores os utilizam com mais frequência para comparar uma variável a vários valores diferentes. Note que a palavra chave ''default'' funciona de forma parecida a um ''else''.
 Observem o exemplo a seguir:
 
 ```java
@@ -57,5 +57,7 @@ switch (day) {
   case 7:
     System.out.println("Domingo");
     break;
+  default:
+    System.out.println("O valor de dia não está entre 1 e 7.");
 }
 ```
