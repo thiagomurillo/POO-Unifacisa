@@ -35,7 +35,7 @@ Observem o exemplo a seguir:
 Scanner scanner = new Scanner(System.in);
 
 int dia = scanner.nextInt();      //recebe dia a partir do teclado
-switch (day) {
+switch (dia) {
   case 1:
     System.out.println("Segunda-feira");
     break;
