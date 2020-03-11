@@ -9,3 +9,5 @@ Repositório contendo conceitos e exemplos de programas com orientação a objet
 
 [3 - Estruturas Condicionais](conteudo/EstruturasCondicionais.md).
 
+[4 - Estruturas de Repetição](conteudo/EstruturasDeRepeticao.md).
+
