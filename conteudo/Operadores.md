@@ -1,5 +1,7 @@
 # Operadores em Java
 
+## Operadores Básicos
+
 **Aritméticos:** +, -, *, /, % (módulo)
 
 ```java
@@ -56,3 +58,51 @@ res3 = a <= d;            //res3 é true
 boolean res4 = a==5;      //res4 é false
 res4 = a==10;             //res4 é true
 ```
+
+
+**Lógicos:** &&, ||
+
+```java
+boolean v1 = true;
+boolean v2 = false;
+
+boolean v3 = v1 && v2;    //v3 é false
+v3 = v1 || v2;            //v3 é true
+```
+
+**Ternário:** ? : (tem o mesmo efeito de um comando condicional if-else)
+
+```java
+int altura = 180;
+String classificacao = altura > 160 ? "alto" : "baixo";  //classificacao é "alto"
+
+//equivale ao seguinte comando if-else
+String classificacao = "";
+if(altura > 160)
+  classificacao = "alto";
+else
+  classificacao = "baixo";
+```
+
+**Atribuição:** =, +=, -=, *=, /=, %=, &=, ^=, |=
+```java
+int idade = 18;   
+idade += 20;      //idade é 38
+idade -= 8;       //idade é 30
+idade *= 2;       //idade é 60
+idade /= 2;       //idade é 30
+idade %= 28;      //idade é 2
+idade ^= 2;       //idade é 4
+```
+
+## Operadores Avançados
+
+**Relacional:** instanceof
+
+**Deslocamento (shift):** <<, >>, >>>=
+
+**Atribuição com deslocamento:** <<=, >>=, >>>=
+
+**Bitwise:** &, |, ^ (and, or e xor)
+
+**Unário:** ~
