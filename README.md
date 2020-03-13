@@ -11,3 +11,5 @@ Repositório contendo conceitos e exemplos de programas com orientação a objet
 
 [4 - Estruturas de Repetição](conteudo/EstruturasDeRepeticao.md).
 
+[5 - Classes e Objetos](conteudo/ClassesEObjetos.md).
+
