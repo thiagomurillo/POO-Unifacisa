@@ -61,3 +61,7 @@ switch (dia) {
     System.out.println("O valor de dia não está entre 1 e 7.");
 }
 ```
+
+---
+
+[Exemplo de código em Java detalhando Estruturas de Repetição](../src/conteudo/EstruturasDeRepeticao.java)

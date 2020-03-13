@@ -8,16 +8,19 @@ O programa abaixo recebe várias notas referentes a um aluno, até que um númer
 Em seguida, calcula a média e exibe um resultado.
 ```java
 Scanner scanner = new Scanner(System.in);
-int notaAluno;
-int media;
-int contador;
-do{
+int notaAluno = 0;
+double media = 0;
+int contador = 0;
+do{		  
   notaAluno = scanner.nextInt();      //recebe a nota a partir do teclado
-  media += notaAluno;
-  contador++;
-} while(notaAluno>=0); //pára quando a nota for negativa;
-
-media /= contador;
+  if(notaAluno>=0) {
+	  media += notaAluno;
+	  contador++;
+  }
+} while(notaAluno>=0); 				  //pára quando a nota for negativa;
+if(contador!=0)
+	media /= contador;
+System.out.println("Media: "+media);
 ```
 
 ## While
@@ -28,16 +31,19 @@ O programa abaixo começa com a variável nota com valor -1, para poder entrar n
 Em seguida, recebe várias notas referentes a um aluno, até que um número negativo seja recebido, calculando, por fim, a média e exibindo um resultado.
 ```java
 Scanner scanner = new Scanner(System.in);
-int notaAluno = -1;
-int media;
-int contador;
+int notaAluno = 0;
+double media = 0;
+int contador = 0;
 while(notaAluno>=0){                  //pára quando a nota for negativa
   notaAluno = scanner.nextInt();      //recebe a nota a partir do teclado
-  media += notaAluno;
-  contador++;
+  if(notaAluno>=0) {
+	  media += notaAluno;
+	  contador++;
+  }
 } 
 
-media /= contador;
+if(contador!=0)
+	media /= contador;
 System.out.println("Média: "+media);
 ```
 
@@ -48,8 +54,9 @@ Ao estrutura de repetição *for*, é usada geralmente quando se sabe a quantida
 O programa abaixo exibe todos os números pares entre 0 e 100.
 
 ```java
+System.out.println("Pares entre 0 e 100");
 for(int i = 0; i <= 100; i++){
-  if(i%2==0)
-    System.out.println(i);
+	  if(i%2==0)
+	    System.out.print(i+", ");
 }
 ```
