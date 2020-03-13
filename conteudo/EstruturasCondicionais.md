@@ -64,4 +64,4 @@ switch (dia) {
 
 ---
 
-[Exemplo de código em Java detalhando Estruturas de Repetição](../src/conteudo/EstruturasDeRepeticao.java)
+[Exemplo de código em Java detalhando Estruturas Condicionais](../src/conteudo/EstruturasCondicionais.java)

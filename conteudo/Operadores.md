@@ -95,6 +95,8 @@ idade %= 28;      //idade é 2
 idade ^= 2;       //idade é 4
 ```
 
+[Exemplo de código em Java detalhando Operadores](../src/conteudo/Operadores.java)
+
 ## Operadores Avançados
 
 **Relacional:** instanceof
