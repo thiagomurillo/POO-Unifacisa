@@ -200,6 +200,9 @@ Preco: R$0.0
 
 ---
 
+[Exemplo de código em Java detalhando Classes, Objetos e Construtores](../src/classeseobjetos/construtores)
+
+---
 
 Dessa forma, com classes (com atributos, funções e construtores) e objetos é possível criar programas que representem o mundo real.
 Essa organização de entidades em classes e respectivos objetos é o que rege o paradigma de programação orientada a objetos.
