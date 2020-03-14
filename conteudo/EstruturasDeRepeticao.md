@@ -62,3 +62,6 @@ for(int i = 0; i <= 100; i++){
 ```
 ---
 [Exemplo de código em Java detalhando Estruturas de Repetição](../src/conteudo/EstruturasDeRepeticao.java)
+
+---
+[Exercícios de Estruturas de Repetição](exercicios/Exercícios%20de%20Estruturas%20de%20Repetição.pdf)
