@@ -277,7 +277,7 @@ class MainRefeicao{
 
 ---
 
-[Exercícios de Classes, Objetos e Construtores](exercicios/exercicio-classes-objetos-construtores.pdf)
+[Exercícios de Classes, Objetos e Construtores](exercicios/ClassesEObjetos.md)
 
 ---
 
