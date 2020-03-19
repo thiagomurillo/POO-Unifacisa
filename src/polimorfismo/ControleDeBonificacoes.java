@@ -1,4 +1,4 @@
-package aula2.revisaooo.heranca;
+package polimorfismo;
 
 class ControleDeBonificacoes {
 	private double totalDeBonificacoes = 0;
