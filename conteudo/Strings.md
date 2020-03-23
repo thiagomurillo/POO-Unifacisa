@@ -148,3 +148,11 @@ A imagem a seguir ilustra o que aconteceu no exemplo anterior:
 ![alt text](imgs/string-pool.png)
 
 Por essa razão, sempre que quiser comparar o conteúdo de duas Strings, use o método **equals**.
+
+---
+
+[Código sobre Strings](../src/conteudo/OperacoesComString.java)
+
+---
+
+[Exercícios de Classes, Objetos e Construtores](exercicios/Strings.md)
