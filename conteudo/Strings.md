@@ -149,7 +149,7 @@ A imagem a seguir ilustra o que aconteceu no exemplo anterior:
 
 Por essa razão, sempre que quiser comparar o conteúdo de duas Strings, use o método **equals**.
 
-## StringBuilder
+## Imutabilidade de Strings
 
 **Em Java, Strings são objetos imutáveis.**
 O que isso quer dizer?
@@ -174,6 +174,25 @@ E isto acontece sucessivamente.
 Observe este fato na ilustração a seguir:
 
 ![alt text](imgs/strings-imutaveis-full.png)
+
+## StringBuilder
+
+Se você precisar economizar espaço de memória, StringBuilder é a solução.
+Objetos de StringBuilder são mutáveis, e nesse caso, sempre que você alterar um StringBuilder, nenhum objeto adicional precisa ser criado.
+
+```java
+StringBuilder nomeCompleto = new StringBuilder("Eduardo");
+nomeCompleto.append(" de");
+nomeCompleto.append(" Lucena");
+nomeCompleto.append(" Falcao");
+
+System.out.println(nomeCompleto);
+```
+
+Nesse caso, apenas um objeto é criado. Nenhuma memória é "desperdiçada".
+Esse código poderia ser representado com a seguinte imagem:
+
+![alt text](imgs/stringbuilder.png)
 
 ---
 
