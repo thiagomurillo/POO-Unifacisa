@@ -5,7 +5,7 @@
 Creio que nesse ponto do curso todo mundo saiba o que é uma String: uma sequência de caracteres, ou seja, um texto.
 O que talvez vocês não soubessem, é que String não é um tipo primitivo.
 Note que ela começa com letra maiúscula, que é uma recomendação para classes em Java.
-E é isto: uma String é um classe, com seus métodos, assim como toda classe tem.
+E é isto: uma String é uma classe, com seus métodos, assim como toda classe tem.
 Portanto, quando criamos uma String, na verdade nós instanciamos um objeto da classe String.
 Você pode se perguntar: "pra instanciar um objeto, eu não preciso usar o **new** e um contrutor da classe?"
 E eu te respondo que sim, você está correto. 
@@ -22,7 +22,6 @@ Ambas as variáveis *nome* e *sobrenome* apontam para objetos.
 Vocês lembram daquela história de que toda classe tem um contrutor, mesmo que ele seja oculto (pois a JVM injeta o código do construtor na classe)?
 Aqui acontece algo parecido.
 O fato é que é tão comum usarmos Strings em nossos programas que os criadores do Java acharam que seria mais interessante ter uma forma mais rápida de criar uma String, omitindo a chamado ao construtor, e consequentemente omitindo o *new*.
-Logo, não faz diferença entre a primeira linha e a segunda.
 
 ## Principais métodos da classe String
 
@@ -33,41 +32,41 @@ No exemplo a seguir, mostro a vocês as principais operações:
 
 
 ```java
-		String nome = "Eduardo de Lucena Falcao";
+String nome = "Eduardo de Lucena Falcao";
 
-		//charAt(indice)
-		System.out.println("Iniciais: "+nome.charAt(0)+"."+nome.charAt(11)+"."+nome.charAt(18));
+//charAt(indice)
+System.out.println("Iniciais: "+nome.charAt(0)+"."+nome.charAt(11)+"."+nome.charAt(18));
 
-		//contains
-		System.out.println(nome.contains("Eduardo"));
-		System.out.println(nome.contains(" "));
-		System.out.println(nome.contains(" de"));
-		System.out.println(nome.contains("z"));
+//contains
+System.out.println(nome.contains("Eduardo"));
+System.out.println(nome.contains(" "));
+System.out.println(nome.contains(" de"));
+System.out.println(nome.contains("z"));
 
-		//indexOf
-		System.out.println(nome.indexOf("Falcao"));
-		System.out.println(nome.indexOf("o"));
+//indexOf
+System.out.println(nome.indexOf("Falcao"));
+System.out.println(nome.indexOf("o"));
 
-		//lastIndexOf
-		System.out.println(nome.lastIndexOf("o"));
+//lastIndexOf
+System.out.println(nome.lastIndexOf("o"));
 
-		//isEmpty
-		System.out.println(nome.isEmpty());
+//isEmpty
+System.out.println(nome.isEmpty());
 
-		//replace
-		System.out.println(nome.replace("Eduardo","EDUARDO"));
-		System.out.println(nome);
-		System.out.println(nome.replace(" ","-"));
-		System.out.println(nome);
+//replace
+System.out.println(nome.replace("Eduardo","EDUARDO"));
+System.out.println(nome);
+System.out.println(nome.replace(" ","-"));
+System.out.println(nome);
 
-		//substring
-		System.out.println(nome.substring(0,7));
+//substring
+System.out.println(nome.substring(0,7));
 
-		//toLowerCase
-		System.out.println(nome.toLowerCase());
+//toLowerCase
+System.out.println(nome.toLowerCase());
 
-		//toUpperCase
-		System.out.println(nome.toUpperCase());
+//toUpperCase
+System.out.println(nome.toUpperCase());
 ```
 
 Se sabemos inglês, então o nome das funções consegue dar uma boa intuição do que ela faz.
@@ -112,4 +111,38 @@ nome.concat(sobrenome);
 System.out.println(nome);
 ```
 
-equals
+## Objetos, == e equals
+
+Uma String sempre é um objeto.
+Já sabemos que, quando os valores a ser comparados não são de tipos primitivos, == compara o endereço de memória dos objetos.
+Logo, uma comparação com == entre duas Strings só resultará em *true* se os as duas variáveis se referirem ao mesmo objeto.
+Por outro lado, sabemos que o método *equals* compara o conteúdo dos objetos.
+
+Observe o exemplo a seguir:
+
+```java
+String nome1 = "Eduardo";
+String nome2 = "Eduardo";
+String nome3 = new String("Eduardo");
+
+System.out.println(nome1==nome2);	 //true
+System.out.println(nome1==nome3);	 //false
+System.out.println(nome1.equals(nome2)); //true
+System.out.println(nome1.equals(nome3)); //true
+
+nome3 = nome2;
+
+System.out.println(nome1==nome3);	 //true
+System.out.println(nome2==nome3);	 //true
+System.out.println(nome1.equals(nome3)); //true
+System.out.println(nome2.equals(nome3)); //true
+```
+
+O precisamos perceber é que no Java existe o que chamamos de "String pool".
+Se você instanciar uma String **sem a palavra chave new**, então o Java tentará economizar memória, verificando se já existe um objeto com aquele mesmo conteúdo criado.
+Em caso positivo, ele reaproveita aquele objeto, atribuindo seu endereço de memória à variável.
+Por outro lado, sempre que uma String for **criada usando explicitamente a palavra reservada new**, então independente de já haver um objeto String com aquele conteúdo criado, a JVM criará um novo objeto.
+
+A imagem a seguir ilustra o que aconteceu no exemplo anterior:
+
+![alt text](imgs/string-pool.png)
