@@ -146,3 +146,5 @@ Por outro lado, sempre que uma String for **criada usando explicitamente a palav
 A imagem a seguir ilustra o que aconteceu no exemplo anterior:
 
 ![alt text](imgs/string-pool.png)
+
+Por essa razão, sempre que quiser comparar o conteúdo de duas Strings, use o método **equals**.
