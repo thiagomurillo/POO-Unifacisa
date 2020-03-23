@@ -69,6 +69,15 @@ public class OperacoesComString {
 		System.out.println(nome2 == nome3); // true
 		System.out.println(nome1.equals(nome3)); // true
 		System.out.println(nome2.equals(nome3)); // true
+		
+		System.out.println("######################## StringBuilder");
+		
+		StringBuilder nomeCompleto = new StringBuilder("Eduardo");
+		nomeCompleto.append(" de");
+		nomeCompleto.append(" Lucena");
+		nomeCompleto.append(" Falcao");
+		
+		System.out.println(nomeCompleto);
 
 	}
 
