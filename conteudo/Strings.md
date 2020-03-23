@@ -149,6 +149,32 @@ A imagem a seguir ilustra o que aconteceu no exemplo anterior:
 
 Por essa razão, sempre que quiser comparar o conteúdo de duas Strings, use o método **equals**.
 
+## StringBuilder
+
+**Em Java, Strings são objetos imutáveis.**
+O que isso quer dizer?
+Quer dizer que toda vez que você altera uma String, na verdade, você cria um novo objeto String e o anterior ficará ocupando espaço na memória até o *Garbage Collector* ser executado e removê-lo.
+
+Veja o exemplo a seguir:
+
+```java
+String nome = "Eduardo";
+nome += " de";
+nome += " Lucena";
+nome += " Falcao";
+
+System.out.println(nome);
+```
+
+Nesse exemplo, a princípio, um objeto String foi criado para armazenar "Eduardo".
+Em seguida, uma nova String, "Eduardo de", foi criada. Nesse momento, a String "Eduardo" existe na memória mas não é usada.
+Depois, uma nova String, "Eduardo de Lucena", foi criada. Nesse momento, as Strings "Eduardo" e "Eduardo de" existem na memória mas não são usadas.
+E isto acontece sucessivamente.
+
+Observe este fato na ilustração a seguir:
+
+![alt text](imgs/strings-imutaveis-full.png)
+
 ---
 
 [Código sobre Strings](../src/conteudo/OperacoesComString.java)
