@@ -7,7 +7,7 @@ O que talvez vocês não soubessem, é que String não é um tipo primitivo.
 Note que ela começa com letra maiúscula, que é uma recomendação para classes em Java.
 E é isto: uma String é uma classe, com seus métodos, assim como toda classe tem.
 Portanto, quando criamos uma String, na verdade nós instanciamos um objeto da classe String.
-Você pode se perguntar: "pra instanciar um objeto, eu não preciso usar o **new** e um contrutor da classe?"
+Você pode se perguntar: "pra instanciar um objeto, eu não preciso usar o **new** e um construtor da classe?"
 E eu te respondo que sim, você está correto. 
 
 Observe o trecho de código a seguir:
@@ -92,10 +92,9 @@ System.out.println(nome);
 
 ## Mais um exemplo de sobrecarga
 
-A classe String possui uma função chamada "concat", que serve para concatenar duas Strings.
-No entanto, raramente usamos "concat", pois há umma forma mais simples de fazer isto: utilizando o operador +.
-Note que + é um operador que permite somar valores numéricos, bem como concatenar Strings.
-Por isso, dizemos que **+** é um operador sobrecarregado.
+A forma mais simples de concatenar duas Strings é utilizando o operador **+**.
+Note que + é um operador que permite somar valores numéricos (como int, long, float e double), bem como concatenar Strings.
+Por isso, dizemos que **+ é um operador sobrecarregado**.
 
 Veja o exemplo a seguir:
 
@@ -114,7 +113,7 @@ System.out.println(nome);
 ## Objetos, == e equals
 
 Uma String sempre é um objeto.
-Já sabemos que, quando os valores a ser comparados não são de tipos primitivos, == compara o endereço de memória dos objetos.
+Já sabemos que, quando os valores a ser comparados não são de tipos primitivos, **== compara o endereço de memória dos objetos**.
 Logo, uma comparação com == entre duas Strings só resultará em *true* se os as duas variáveis se referirem ao mesmo objeto.
 Por outro lado, sabemos que o método *equals* compara o conteúdo dos objetos.
 
@@ -139,7 +138,7 @@ System.out.println(nome2.equals(nome3)); //true
 ```
 
 O precisamos perceber é que no Java existe o que chamamos de "String pool".
-Se você instanciar uma String **sem a palavra chave new**, então o Java tentará economizar memória, verificando se já existe um objeto com aquele mesmo conteúdo criado.
+Se você instanciar uma String **sem a palavra reservada new**, então o Java tentará economizar memória, verificando se já existe um objeto com aquele mesmo conteúdo criado.
 Em caso positivo, ele reaproveita aquele objeto, atribuindo seu endereço de memória à variável.
 Por outro lado, sempre que uma String for **criada usando explicitamente a palavra reservada new**, então independente de já haver um objeto String com aquele conteúdo criado, a JVM criará um novo objeto.
 
@@ -189,10 +188,17 @@ nomeCompleto.append(" Falcao");
 System.out.println(nomeCompleto);
 ```
 
-Nesse caso, apenas um objeto é criado. Nenhuma memória é "desperdiçada".
+Nesse caso, ao criar um objeto da classe StringBuiler, apenas um objeto é criado. Nenhuma memória é "desperdiçada".
 Esse código poderia ser representado com a seguinte imagem:
 
 ![alt text](imgs/stringbuilder.png)
+
+Embora saibamos disso, ainda digo que é mais comum usarmos String em nossas classes.
+O uso de StringBuilder é recomendado em uma situação em que muitas operações são executadas nas Strings em pouco intervalo de tempo.
+Por muitas eu quero dizer milhares ou milhões.
+Isso geralmente é usado em competições de programação, ou em alguma situação que você precise economizar muita memória e tornar o programa mais eficiente.
+O que eu acho importante é que a gente saiba desses detalhes.
+Talvez, algum dia, em uma entrevista com uma empresa importante, mostrar que você sabe esses tipos detalhes torna evidente que você é uma pessoa informada e que conhece detalhes importantes da linguagem Java.
 
 ---
 
