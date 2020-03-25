@@ -184,5 +184,23 @@ Para declarar arrays, usamos colchetes:
  
  ## Performance
  
+ Considere um programa que para cada dia armazena sua temperatua em um array.
+ Esse programa quer armazenar as temperaturas de 100 milhões de  dias, ou seja, 10^8 dias.
+ Um array com 100 milhões de inteiros ocupa bastante espaço na memória (aproximadamente 400 MB).
+ No entanto, o aspecto interessante de arrays é que eles têm acesso extremamente rápido, mesmo que você esteja buscando o último elemento do array.
  
+ Observe a ilustração:
  
+ ![alt text](imgs/arrays.png)
+ 
+ Na imagem estão ilustrados o endereço de memória do array, seus índices, e o tamanho de cada elemento do array (que por ser int é de 4 bytes).
+ Note que se temos um array com 10^8 elementos, o último elementos estará no índice (10^8) - 1, pois o primeiro elemento fica no índice 0.
+ 
+ Assuma que o índice usado para obter um valor do array é a variável **pos**.
+ O que quero deixar claro pra vocês é que quando tentarmos acessar o último elemento, *temp[pos]* onde *pos = 100000000-1*, a JVM não irá percorrer elemento por elemento do array, mas ela irá direto ao elemento desejado, de forma instantânea.
+ 
+ A gente consegue fazer isso com arrays porque **arrays são armazenados em blocos contíguos de memória**.
+ Portanto, se o endereço do array é 327623, e o elemento buscado é o primeiro elemento, ou seja, *temp[pos]* onde *pos = 0*,  então sua posição de memória seria 327623 + pos * 4 (visto que um inteiro ocupa 4 bytes). Como *pos = 0*, nesse caso, a JVM iria para o endereço 327623.
+ No caso de estarmos acessando o último elemento do array, *temp[pos]* onde *pos = 100000000-1*, a JVM acessaria o endereço de memória 327623 + pos * 4, ou seja, 327623+(100000000-1) * 4 = 400327619.
+ 
+ É por esta razão que arrays são estruturas de rápido acesso, mesmo que seu tamanho seja absurdamente grande.
