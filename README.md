@@ -11,11 +11,13 @@ Repositório contendo conceitos e exemplos de programas com orientação a objet
 
 [4 - Estruturas de Repetição](conteudo/EstruturasDeRepeticao.md).
 
-[5 - Classes e Objetos](conteudo/ClassesEObjetos.md).
+[5 - Arrays](conteudo/Arrays.md).
 
-&nbsp;  &nbsp;  [5.1 - Variáveis e Métodos de Instância e de Classe](conteudo/VariaveisEMetodosDeInstanciaEDeClasse.md).
+[6 - Classes e Objetos](conteudo/ClassesEObjetos.md).
 
-&nbsp;  &nbsp;  [5.2 - Strings](conteudo/Strings.md).
+&nbsp;  &nbsp;  [6.1 - Variáveis e Métodos de Instância e de Classe](conteudo/VariaveisEMetodosDeInstanciaEDeClasse.md).
+
+&nbsp;  &nbsp;  [6.2 - Strings](conteudo/Strings.md).
 
 ### Conceitos aprendidos:
 
