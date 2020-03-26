@@ -206,4 +206,4 @@ Talvez, algum dia, em uma entrevista com uma empresa importante, mostrar que voc
 
 ---
 
-[Exercícios de Classes, Objetos e Construtores](exercicios/Strings.md)
+[Exercícios sobre Strings](exercicios/Strings.md)
