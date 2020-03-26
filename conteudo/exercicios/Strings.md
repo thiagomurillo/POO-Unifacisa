@@ -1,25 +1,44 @@
 # Exercícios sobre Strings
 
-Para cada questão implemente, além das classes solicitadas, uma classe com programa principal (main) que permita testar a corretude das classes criadas.
+1. Crie uma classe chamada StringUtils com os seguintes métodos estáticos:
 
-1. Implemente uma classe que possui um identificador (tipo String) e com métodos que retornam este identificador no formato camel case para atributos e métodos e outro para classes. Ex: atributo quantidade de questoes fornece quantidadeDeQuestoes; metodo get quantidade de questoes fornece getQuantidadeDeQuestoes; classe formatador de identificadores fornece FormatadorDeIdentificadores
+- **String formataAtributo(String atributo)**: atributos iniciam com letra minúscula e devem estar no formato camelCase; Ex: *"quantidade de questoes"* ==> *"quantidadeDeQuestoes"*
 
-2. Crie uma classe ComparaString que contém duas strings como atributo. Crie dois métodos, um que retorna a string que ocorre antes e outro que retorna a que ocorre depois, considerando uma ordenação lexicográfica. Se forem iguais, os métodos devem retornar a mesma string. Ex: chevrolet fiat fornece chevrolet fiat; volkswagen ford fornece ford volkswagen; honda honda fornece honda honda
+- **String formataMetodo(String metodo)**: métodos iniciam com letra minúscula e devem estar no formato camelCase; Ex: *"get quantidade de questoes"* ==> *"getQuantidadeDeQuestoes"*
 
-3. Construa uma classe com um atributo do tipo string e com um método que retorna uma string que é a inversão da palavra contida no atributo. Ex: socorram me subi no onibus em marrocos fornece socorram me subino on ibus em marrocos
+- **String formataClasse(String classe)**: classes iniciam com letras maiúsculas devem estar no formato camelCase; Ex: *"formatador de identificadores"* ==> *"FormatadorDeIdentificadores"*
 
-4. Normalmente, cadastros em bancos de dados utilizam apenas palavras em caixa alta. Implemente uma classe que possui um atributo do tipo string e com um método capaz de retornar a conversão do atributo com letras maiúsculas e sem espaços em branco no inicio ou fim do atributo. Ex: PhUlaNo dEtHal fornece PHULANO DETHAL; v1D4 l0k4 fornece V1D4 L0K4
+- **String ordenaStrings(String palavra1, String palavra2)**: retorna uma única String, com as 2 palavras separadas por espaço mas em ordem lexicográfica; Ex: *"chevrolet fiat"* ==> *"chevrolet* e *fiat"*; *"volkswagen ford"* ==> *"ford volkswagen"*; *"honda honda"* ==> *"honda honda"*
 
-5. Construa uma classe capaz de armazenar uma frase (string) e com um método para informar a quantidade de vogais nesta frase. Ex: In God We Trust fornece 4
+- **boolean ehPalindromo(String palavra)**: retorna verdadeiro se a palavre é um palíndromo; Ex: *"arara"* ==> *true*.
 
-6. Crie uma classe capaz de armazenar uma frase em um atributo (string) e retornar, através de um método, uma versão da frase digitada sem espaços supérfluos (espaços em branco duplicados no começo, meio e fim da frase). Ex: " Hay que endurecerse,    pero  sin perder la   ternura   jamás    " fornece "Hay que endurecerse, pero sin perder la ternura jamás"
+- **String transformaParaCaixaAlta(String palavra)**: retornar palavra com letras maiúsculas; Ex: *"PhUlaNo dEtHal"* ==> *"PHULANO DETHAL"*
 
-7. Implemente uma classe com um método que retorna todas as posições de ocorrência de uma subpalavra dentro de uma frase armazenada em um atributo. O método deve retornar um array. Ex: O doce perguntou para o doce, qual o doce mais doce? fornece [2, 24, 37, 47]
+- **int contaVogais(String frase)**: informa a quantidade de vogais na frase; Ex: *"In God We Trust"* ==> *4*
 
-8. Crie uma classe chamada NumeroBinario que recebe uma string com uma representação binária em seu construtor e com um método que retorna a representação decimal deste número. Ex: 101110010 fornece 370; 1100110011 fornece 819
+- **String removeEspacosSuperfluos(String frase)**: retornar uma versão da frase digitada sem espaços supérfluos; Ex: *" Hay que endurecerse,    pero  sin perder la   ternura   jamás    "* ==> *"Hay que endurecerse, pero sin perder la ternura jamás"*
 
-9. Faça uma classe com um atributo do tipo string e com um método que retorna a quantidade de palavras (separadas por espaço) nesta frase. Ex: programar é muito fácil fornece 4
+- **int[] ocorrencias(String frase, String subPalavra)**: retorna todas as ocorrência (índices) da subpalavra dentro da frase; Ex: *"O doce perguntou para o doce, qual o doce mais doce?"* ==> *[2, 24, 37, 47]*
 
-10. Faça uma classe com um método que retorna um array com um histograma de letras (sem diferenciar maiúsculas de minúsculas) de uma palavra armazenada em um atributo. Ex: the quick brown fox jumps over the lazy dog fornece A: 1, B: 1, C: 1, D: 1, E: 3, F: 1, G: 1, H: 2, I: 1, J: 1, K: 1, L: 1, M: 1, N: 1, O: 4, P: 1, Q: 1, R: 2, S: 1, T: 2, U: 2, V: 1, W: 1, X: 1, Y: 1, Z: 1
+- **int binarioPraDecimal(String binario)**: transforma a String binario para sua representação em decimal; Ex: *"101110010"* ==> *370*; *"1100110011"* ==> *819*
+
+- **int getQtdadePalavras(String frase)**: retorna a quantidade de palavras separadas por espaço na frase; Ex: *"programar é muito fácil"* ==> *4*
+
+- **int[] histogramaLetras(String texto)**: retorna um array com um histograma de letras (sem diferenciar maiúsculas de minúsculas) de um texto. Ex: *"the quick brown fox jumps over the lazy dog*" ==> *[1, 1, 1, 1, 3, 1, 1, 2, 1, 1, 1, 1, 1, 1, 4, 1, 1, 2, 1, 2, 2, 1, 1, 1, 1, 1]* (perceba que o índice 0 representa A, 1 representa B, e daí por diante) 
+
+2. Explique qual a diferença entre criar uma String das seguintes formas: 
+- *String nome = "Eduardo";*
+- *String nome = new String("Eduardo");*
+
+3. Explique como funciona o String pool.
+
+4. O que acontece toda vez que uma String é modificada? Considere o exemplo a seguir:
+```java
+String nome = "Eduardo";
+nome += "de Lucena";
+nome += "Falcao";
+```
+
+5. Como a classe StringBuilder pode ajudar a tornar o código anterior mais eficiente? 
 
 Agradecimentos ao prof Bruno de Brito por ceder este material de exercícios sobre Strings.
