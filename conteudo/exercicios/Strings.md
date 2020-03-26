@@ -32,7 +32,7 @@
 
 3. Explique como funciona o String pool.
 
-4. O que acontece toda vez que uma String é modificada? Considere o exemplo a seguir:
+4. O que acontece toda vez que uma String é modificada? Considere o exemplo a seguir para embasar sua resposta.
 ```java
 String nome = "Eduardo";
 nome += "de Lucena";
