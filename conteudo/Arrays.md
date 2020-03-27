@@ -78,7 +78,7 @@ Para declarar arrays, usamos colchetes:
     }
  ```
  
- Para essa situação, os dois tipos de for tem o mesmo efeito.
+ Para essa situação, os dois tipos de for têm o mesmo efeito.
  Portanto, nesse tipo de situação, use o que você preferir.
  
  Entretanto, em outras situações, o for-each não é indicado.
@@ -100,13 +100,13 @@ Para declarar arrays, usamos colchetes:
  Podemos criar arrays bidimensionais que, por exemplo, podem representar uma matriz.
  Também Podemos criar arrays tridimensionais, e arrays n-dimensionais, a depender do problema a ser solucionado.
  
- Poderíamos representas as 3 notas de 6 alunos em um bimestre da seguinte forma:
+ Poderíamos representar as 3 notas de 6 alunos em um bimestre da seguinte forma:
  ```java
  String[] alunos = new String[] { "Joao", "Joana", "Andre", "Gustavo", "Mariana", "Aline" };
  int[][] notasBimestre = new int [][] {{10, 5, 6, 8, 8, 5}, {9, 6, 5, 7, 8, 10}, {8, 8, 4, 9, 10, 9}};
  
  //notas de Joao: notasBimestre[0][0], notasBimestre[1][0], notasBimestre[2][0]
- for(int i = 0; i < alunos.length; i++){
+ for(int i = 0; i < 6; i++){
  	System.out.println("Aluno: "+alunos[i]+"; média: "+
 		(notasBimestre[0][i] + notasBimestre[1][i] + notasBimestre[2][i])/3);
  }
