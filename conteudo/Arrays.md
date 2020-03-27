@@ -94,6 +94,39 @@ Para declarar arrays, usamos colchetes:
     }
  ```
  
+ ## Arrays Multi-Dimensionais
+ 
+ Também é possível criar arrays de arrays.
+ Podemos criar arrays bidimensionais que, por exemplo, podem representar uma matriz.
+ Também Podemos criar arrays tridimensionais, e arrays n-dimensionais, a depender do problema a ser solucionado.
+ 
+ Poderíamos representas as 3 notas de 6 alunos em um bimestre da seguinte forma:
+ ```java
+ String[] alunos = new String[] { "Joao", "Joana", "Andre", "Gustavo", "Mariana", "Aline" };
+ int[][] notasBimestre = new int [][] {{10, 5, 6, 8, 8, 5}, {9, 6, 5, 7, 8, 10}, {8, 8, 4, 9, 10, 9}};
+ 
+ //notas de Joao: notasBimestre[0][0], notasBimestre[1][0], notasBimestre[2][0]
+ for(int i = 0; i < alunos.length; i++){
+ 	System.out.println("Aluno: "+alunos[i]+"; média: "+
+		(notasBimestre[0][i] + notasBimestre[1][i] + notasBimestre[2][i])/3);
+ }
+ ```
+ 
+ O array bidimensional *notasBimestre* pode ser representado pela seguinte tabela:
+ 
+ linhas/colunas | 0 | 1 | 2 | 3 | 4 | 5 |
+---- | ---- | ---- |  ---- | ---- | ---- | ---- |
+0 | 10 | 5 | 6 | 8 | 8 | 5 |
+1 | 9 | 6 | 5 | 7 | 8 | 10 |
+2 | 8 | 8 | 4 | 9 | 10 | 9 |
+ 
+Para acessar um elemento desse array bidimensional, é preciso fornecer o índice da linha e o índice da coluna desejadas.
+Note que, no exemplo que estamos utilizando, a linha 0 representa a primeira nota, a linha 1 representa a segunda nota, e a linha 2 representa a terceira nota.
+De forma semelhante, a coluna 0 representa o aluno "Joao", a coluna 1 representa a aluna "Joana", a coluna 2 representa o aluno "Andre", a coluna 3 representa o aluno "Gustavo", a coluna 4 representa a aluna "Mariana", e a coluna 5 representa a aluna "Aline".
+Portanto, se quisermos saber a primeira nota de Joao, basta acessarmos notasBimestre[0][0], e se quisermos saber a segunda nota de Gustavo, basta acessarmos notasBimestre[1][3]. Se tivermos interesse na terceira nota de Mariana, conseguiremos acessá-la da seguinte maneira: notasBimestre[2][5].
+
+O código provido no exemplo varre o array de alunos e impime a média de cada um. 
+ 
  ## Arrays também são Objetos
  
  Arrays também **são objetos**.
