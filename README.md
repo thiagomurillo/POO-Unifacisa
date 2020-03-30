@@ -19,6 +19,8 @@ Repositório contendo conceitos e exemplos de programas com orientação a objet
 
 &nbsp;  &nbsp;  [5.3 - Arrays](conteudo/Arrays.md).
 
+&nbsp;  &nbsp;  [5.4 - Listas](conteudo/Listas.md).
+
 ### Conceitos aprendidos:
 
 Tipos primitivos (boolean, char, byte, short, int, long, float, double). 
@@ -27,5 +29,6 @@ Estruturas de repetição (while, do-while, for).
 Classes e Objetos (conceito de classe e objeto, como instanciar objetos, construtor default e com argumento, palavra reservada this, sobrecarga de construtores, um construtor reutilizar outro construtor). Variáveis e métodos de instância e de classe.
 Strings.
 Arrays.
+Listas
 Encapsulamento (conceito e importância, modificadores: private, default ou package-private, protected, public).
 Herança (conceito e importância; palavras reservadas: extends, instanceof, super; sobrescrita e suas regras).
