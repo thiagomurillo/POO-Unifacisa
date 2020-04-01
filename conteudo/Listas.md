@@ -205,3 +205,7 @@ O LinkedList usa uma lista ligada, ou seja, objetos apontando para outros objeto
  Em uma situação em que tenhamos uma LinkedList e um ArrayList ambos com capacidade *n* e totalmente preenchidas, a lista ligada ocupará o dobro de espaço de memória do ArrayList.
  Em contrapartida, há situações em que a LinkedList pode economizar mais memória do que o ArrayList.
  Para finalizar, vale salientar que por ArrayLists serem implementados com arrays, eles se valem dos benefícios dos arrays: conseguem chegar ao elemento desejado de forma instantânea, enquanto que no LinkedList é preciso percorrer toda a lista para chegar a um elemento específico.
+
+---
+
+[Exercícios de Listas](exercicios/Listas.md)
