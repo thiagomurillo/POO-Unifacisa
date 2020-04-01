@@ -29,6 +29,6 @@ Estruturas de repetição (while, do-while, for).
 Classes e Objetos (conceito de classe e objeto, como instanciar objetos, construtor default e com argumento, palavra reservada this, sobrecarga de construtores, um construtor reutilizar outro construtor). Variáveis e métodos de instância e de classe.
 Strings.
 Arrays.
-Listas
+Listas (wrappers, autoboxing e unboxing, performance).
 Encapsulamento (conceito e importância, modificadores: private, default ou package-private, protected, public).
 Herança (conceito e importância; palavras reservadas: extends, instanceof, super; sobrescrita e suas regras).
