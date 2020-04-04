@@ -28,6 +28,7 @@ Faça uma classe com um main para testar SistemaInterpol.
 3. Crie uma classe chamada LojaDeCarros. 
 Reutilize a classe Carro implementada no [exercício ClassesEObjetos](ClassesEObjetos.md).
 Adicione na classe Carro um atributo de instância *int id*, para identificar aquele carro.
+Nos construtores da classe Carro, gere um *id* aleatório para cada carro instanciado.
 LojaDeCarros deve ter uma Lista de Carros disponíveis (*carrosDisponiveis*) como atributo de instância.
 Essa classe também deve ter um método de instância (**void adicionarCarro(Carro carro)**), que recebe um Carro como argumento. 
 Portanto, esse método deve adicionar esse nome na lista *carrosDisponiveis*.
