@@ -21,6 +21,8 @@ Repositório contendo conceitos e exemplos de programas com orientação a objet
 
 &nbsp;  &nbsp;  [5.4 - Listas](conteudo/Listas.md).
 
+&nbsp;  &nbsp;  [5.5 - Encapsulamento](conteudo/Encapsulamento.md).
+
 ### Conceitos aprendidos:
 
 Tipos primitivos (boolean, char, byte, short, int, long, float, double). 
