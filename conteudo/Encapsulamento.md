@@ -23,7 +23,6 @@ Observe o exemplo a seguir:
 
 ```java
 class ContaCorrente {
-	
 	double limite;			
 	double saldo;	
 	int numero;
@@ -90,14 +89,14 @@ class ContaCorrente {
 	public void debitar(double quantia) {
 		saldo -= quantia;
 	}
-  
-  public int getNumero(){
-    return this.numero;
-  }
-  
-  public String getCliente(){
-    return this.cliente;
-  }
+	
+	public int getNumero(){
+		return this.numero;
+	}
+	
+	public String getCliente(){
+		return this.cliente;
+	}
 }
 ```
 
