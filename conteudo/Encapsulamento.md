@@ -174,3 +174,7 @@ E é isto.
 Encapsulamento é um conceito fundamental na criação de programas com o paradigma de Orientação a Objetos.
 Vai além de simplesmente "tornar atributos privados e criar funções públicas setters e getters".
 Se trata de omitir o que deve ser omitido, tornar público o que precisa ser acessado por outras entidades, e com isto, criar uma abstração que diminua o acoplamento entre as classes.
+
+---
+
+[Exercícios de Encapsulamento](exercicios/Encapsulamento.md)
