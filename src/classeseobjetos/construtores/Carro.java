@@ -7,6 +7,7 @@ public class Carro {
 	boolean vidroEletrico, arCondicionado;
 	boolean cambioAutomatico, direcaoEletrica;
 	double precoBase;
+	public int id;
 	
 	public Carro(String nome, String marca, double precoBase) {
 		this.nome = nome;

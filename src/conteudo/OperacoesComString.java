@@ -3,7 +3,7 @@ package conteudo;
 public class OperacoesComString {
 
 	public static void main(String[] args) {
-
+				
 		String nome = "Eduardo de Lucena Falcao";
 
 		// charAt(indice)
@@ -27,9 +27,9 @@ public class OperacoesComString {
 
 		// replace
 		System.out.println(nome.replace("Eduardo", "EDUARDO"));
-		System.out.println(nome);
+		System.out.println("Nome: "+nome);
 		System.out.println(nome.replace(" ", "-"));
-		System.out.println(nome);
+		System.out.println("Nome: "+nome);
 
 		// substring
 		System.out.println(nome.substring(0, 7));
@@ -41,6 +41,14 @@ public class OperacoesComString {
 		System.out.println(nome.toUpperCase());
 
 		System.out.println("########################");
+		
+		nome = "Eduardo de Lucena Falcao";
+
+		nome = nome.substring(0,7);
+		nome = nome.toUpperCase();
+
+		System.out.println(nome);
+		
 
 		nome = "Eduardo";
 		String sobrenome = "Falcao";
