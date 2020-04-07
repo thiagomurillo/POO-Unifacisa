@@ -4,6 +4,7 @@ Listas têm a mesma finalidade de arrays: armazenar elementos de um mesmo tipo.
 No entanto, um aspecto interessante é que listas podem mudar de tamanho.
 Elas podem crescer seus tamanhos de acordo com nossa conveniência.
 Enquanto arrays jamais podem crescer ou diminuir em sua capacidade, as listas fazem isso de forma transparente.
+Uma caracterstica comum é que listas e arrays só armazenam um tipo de objeto por vez.
 
 ## Principais Métodos
 
@@ -37,8 +38,8 @@ Vamos ver os principais métodos de listas no exemplo a seguir:
 ```
 
 Na primeira linha, vemos que para criar uma lista, precisamos definir o tipo de objeto que poderá entrar nela.
-Neste caso, *nomes* representa uma lista de Strings.
-Em seguida, usamos uma séria de métodos na lista:
+Neste caso, *nomes* representa uma lista de Strings, e apenas Strings podem ser inseridas nesta lista.
+Em seguida, usamos uma série de métodos na lista.
 
 Os principais métodos são:
 - add(Object o): permite adicionar um objeto ao fim da lista
@@ -47,7 +48,7 @@ Os principais métodos são:
 - indexOf(Object o): retorna o índice do objeto especificado
 - get(int index): retorna o objeto no índice especificado
 - remove(int index): remove o objeto no índice especificado
-- remove(Object o): remove o objeto especificado
+- remove(Object o): remove o objeto especificado (usando a função equals do objeto em questão)
 - clear(): remove todos os objetos da lista
 
 ## Listas só Armazenam Objetos
@@ -72,8 +73,8 @@ Double d = new Double(10.0);
 Todas as variáveis acima apontam para objetos que servem como uma espécie de invólucro para os primitivos.
 Ou seja, é uma alternativa para que um valor de tipo primitivo apareça na forma de objeto.
 
-Mas se temos *wrappers*, por que usar os tipos primitivos? 
-Simples, eles são mais rápidos e consomem menos memória, afinal não tem implementação de métodos ou qualquer outro algoritmo complexo que venha a consumir mais tempo da JVM.
+Note que tipos primitivos são mais rápidos e consomem menos memória, afinal não tem implementação de métodos ou qualquer outro algoritmo complexo que venha a consumir mais tempo da JVM.
+Porém, em algumas situações, como por exemplo na utilização de listas, usar tipos primitivos não é possível.
 
 Apesar do código citado anteriormente funcionar, a utilização de construtores para criar os *wrappers* não é recomendada: está depreciada.
 A solução é o que chamamos de **boxing**.
@@ -100,7 +101,7 @@ Uma vez que não é possível instanciar uma lista de inteiros, instanciamos uma
 Note que, *embora a lista não seja do tipo primitivo int*, são adicionados valores inteiros à lista.
 É aí que acontece o **autoboxing**, ou seja, a conversão automática de **int** para **Integer**, visto que não é possível adicionar int em listas.
 
-Autoboxing é aplicada pelo compilador do Java nas seguintes condições:
+Autoboxing é aplicado pelo compilador do Java nas seguintes condições:
 1. Quando um valor primitivo é passado como um parâmetro para um método que espera um objeto. (o caso do exemplo anterior)
 2. Quando um valor primitivo é atribuído a um wrapper. (o caso exibido a seguir)
 
@@ -201,8 +202,10 @@ O LinkedList usa uma lista ligada, ou seja, objetos apontando para outros objeto
  
  Note que existe um trade-off.
  Listas ligadas nunca terão memória ociosa.
- Em compensação, em uma situação em que tenhamos uma LinkedList e um ArrayList ambos com capacidade n e totalmente preenchidas, a lista ligada ocupará o dobro de espaço de memória do ArrayList.
+ Em uma situação em que tenhamos uma LinkedList e um ArrayList ambos com capacidade *n* e totalmente preenchidas, a lista ligada ocupará o dobro de espaço de memória do ArrayList.
  Em contrapartida, há situações em que a LinkedList pode economizar mais memória do que o ArrayList.
  Para finalizar, vale salientar que por ArrayLists serem implementados com arrays, eles se valem dos benefícios dos arrays: conseguem chegar ao elemento desejado de forma instantânea, enquanto que no LinkedList é preciso percorrer toda a lista para chegar a um elemento específico.
- 
- 
+
+---
+
+[Exercícios de Listas](exercicios/Listas.md)
