@@ -47,15 +47,15 @@ public class JogoDaVelha {
 //		}	
 	}
 	
-	public static void main(String[] args) {
-		JogoDaVelha jogo = new JogoDaVelha();
-		do {
-			//recebe do teclado linha e coluna
-			int linha = 0;
-			int coluna = 0;
-			
-			jogo.jogar(linha, coluna);
-		}while(!jogo.detectaFimJogo());
-	}
+//	public static void main(String[] args) {
+//		JogoDaVelha jogo = new JogoDaVelha();
+//		do {
+//			//recebe do teclado linha e coluna
+//			int linha = 0;
+//			int coluna = 0;
+//			
+//			jogo.jogar(linha, coluna);
+//		}while(!jogo.detectaFimJogo());
+//	}
 
 }
