@@ -34,4 +34,3 @@ Strings (princiais métodos, imutabilidade, String pool, classe StringBuiler).
 Arrays (inicialização, acessar valor, modificar valor, arrays multi-dimensionais, métodos estáticos de Arrays, Exceções, performance).
 Listas (wrappers, autoboxing e unboxing, performance).
 Encapsulamento (conceito e importância, modificadores: private, default ou package-private, protected, public).
-Herança (conceito e importância; palavras reservadas: extends, instanceof, super; sobrescrita e suas regras).
