@@ -16,7 +16,7 @@ No paradigma de programação orientada a objetos existem duas formas de promove
 
 ## Composição
 
-Sempre que uma determinada classe A tiver uma variável de referência de uma outra classe B, dizemos que **A tem B**.
+Sempre que uma determinada classe A tiver uma variável de referência cujo tipo é de uma outra classe B, dizemos que **A tem B**.
 Quando **A tem B**, a classe A tem acesso a todas as variáveis e funções públicas de B.
 Por essa razão, A reusa o código de B.
 Nesse caso, A reusa B através da *composição*.
@@ -58,7 +58,7 @@ class Corrida{
 }
 ```
 
-Se criarmos a classe Data, podemor por composição evitar a duplicação de código.
+Se criarmos a classe Data, podemos por composição evitar a duplicação de código.
 
 ```java
 
@@ -96,7 +96,7 @@ class Corrida{
 }
 ```
 
-No exemplo que usamos a composição como estratégia de reúso de código nós temos uma facilidade maior para se adaptar à mudanças.
+No exemplo que usamos a composição como estratégia de reúso de código nós temos uma facilidade maior para se adaptar às mudanças.
 Nosso programa se torna flexível.
 Nessa situação, uma mudança qualquer referente à datas, de modo geral, se restringe à classe data.
 
@@ -138,7 +138,7 @@ class Corrida{
 }
 ```
 
-Note que a composição permite um relacionamento **1 para N**.
+Note que a composição permite um relacionamento **1 para N** (1 classe pode reutilizar múltiplas outras classes).
 A classe Corrida, por exemplo, contém 2 datas (e poderia conter mais datas, se fosse o código).
 Além disto, Corrida poderia conter outras classes.
 
@@ -250,7 +250,7 @@ Note que o modificador de acesso dos atributos de Pessoa é *protected*, que per
 Nessa situação nós temos o reúso do código de Pessoa por Motorista e Passageiro.
 Note que, para o reúso de Data, a herança não faria sentido pois seria estranho dizer que *Motorista é uma Data* e *Passageiro é uma Data*, e *Corrida é uma Data*.
 
-A herança permite apenas um relacionamento **1 para 1**.
+A herança permite apenas um relacionamento **1 para 1** (1 classe pode reusar apenas o código de 1 outra classe).
 Portanto, a representação da classe Corrida com duas datas não seria possível de alcançar apenas com herança.
 Diz-se que em Java temos apenas herança simples, ou seja, um classe não pode herdar de mais de uma classe (enquanto na composição, isto é possível).
 
@@ -321,7 +321,7 @@ class CorridaPool extends Corrida{
 Detalhes acerca do exemplo.
 1. A anotação @Override é opcional, mas recomendada, pois indica ao compilador que o programador tem a intenção de sobrescrever aquele método. Se o método anotado não estiver dentro das regras de reescrita, então um erro de compilação é lançado.
 2. Usamos o modificador de acesso protected para permitir que as sub-classes consigam acessar alguns atributos. Outra opção seria deixar os atributos privados e criar métodos acessadores getters públicos.
-3. Usamos super para se referir à uma variável/método da superclasse. No nosso exemplo, *super.getCusto()* é obrigatório, pois de outro modo estaríamos nos referindo à função *getCusto()* da classe CorridaPool. No caso de *super.passageiros*, o super não é obrigatório pois não existe ambiguidade a ser removida. Por exemplo, poderia existir uma variável local dentro do método com identificação *passageiros*, o que poderia gerar ambiguidade entre a variável local (do método) e a variável da superclasse.
+3. Usamos super para se referir à uma variável/método da superclasse. No nosso exemplo, *super.getCusto()* é obrigatório, pois de outro modo estaríamos nos referindo à função *getCusto()* da classe CorridaPool. No caso de *super.passageiros*, o super não é obrigatório pois não existe ambiguidade a ser removida. Por exemplo, se existisse uma variável local dentro do método getCusto() com identificação *passageiros*, o que poderia gerar ambiguidade entre a variável local (do método) e a variável da superclasse.
 
 #### Regras da Sobrescrita
 
