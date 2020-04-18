@@ -321,7 +321,7 @@ class CorridaPool extends Corrida{
 Detalhes acerca do exemplo.
 1. A anotação @Override é opcional, mas recomendada, pois indica ao compilador que o programador tem a intenção de sobrescrever aquele método. Se o método anotado não estiver dentro das regras de reescrita, então um erro de compilação é lançado.
 2. Usamos o modificador de acesso protected para permitir que as sub-classes consigam acessar alguns atributos. Outra opção seria deixar os atributos privados e criar métodos acessadores getters públicos.
-3. Usamos super para se referir à uma variável da superclasse. No nosso exemplo é opcional. Só é obrigatório quando precisamos remover a ambiguidade entre uma variável local (do método) e a variável da superclasse.
+3. Usamos super para se referir à uma variável/método da superclasse. No nosso exemplo, *super.getCusto()* é obrigatório, pois de outro modo estaríamos nos referindo à função *getCusto()* da classe CorridaPool. No caso de *super.passageiros*, o super não é obrigatório pois não existe ambiguidade a ser removida. Por exemplo, poderia existir uma variável local dentro do método com identificação *passageiros*, o que poderia gerar ambiguidade entre a variável local (do método) e a variável da superclasse.
 
 #### Regras da Sobrescrita
 
