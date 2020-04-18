@@ -23,6 +23,8 @@ Repositório contendo conceitos e exemplos de programas com orientação a objet
 
 &nbsp;  &nbsp;  [5.5 - Encapsulamento](conteudo/Encapsulamento.md).
 
+[6 - Reuso](conteudo/Reuso.md).
+
 [Provas - Unidade I](https://drive.google.com/open?id=1thIsyNeReOJq-vRdySqEVSYOmjwTEyZj)
 
 ### Conceitos aprendidos:
@@ -36,3 +38,4 @@ Strings (princiais métodos, imutabilidade, String pool, classe StringBuiler).
 Arrays (inicialização, acessar valor, modificar valor, arrays multi-dimensionais, métodos estáticos de Arrays, Exceções, performance).
 Listas (wrappers, autoboxing e unboxing, performance).
 Encapsulamento (conceito e importância, modificadores: private, default ou package-private, protected, public).
+Reúso (composição, herança, sobrescrita).
