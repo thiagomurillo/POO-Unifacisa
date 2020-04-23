@@ -59,9 +59,9 @@ public class Uber {
 		return custoAgregado;
 	}
 	
-	public Corrida removeCorridaMaisAntiga(String cliente) {
-		
-	}
+//	public Corrida removeCorridaMaisAntiga(String cliente) {
+//		
+//	}
 	
 	private int getIndiceCorridaMaisAntiga(String cliente) {
 		int indiceCorridaMaisAntiga = -1;
