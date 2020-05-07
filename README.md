@@ -27,6 +27,8 @@ Repositório contendo conceitos e exemplos de programas com orientação a objet
 
 [7 - Exceções](https://docs.google.com/presentation/d/1d5GU4ogLLL-fUi4E6OJskhnfbQ3xTdyUjp_65vy3SY4/edit?usp=sharing) - [Exercícios sobre Exceções](conteudo/exercicios/Excecoes.md)
 
+[8 - Testes Unitários](https://drive.google.com/file/d/1-U-Cery4zoHZLxTsjmX6uWaFOm8W2iqn/view?usp=sharing) - [Exercícios sobre Testes Unitários](conteudo/exercicios/TestesUnitarios.md)
+
 [Provas - Unidade I](https://drive.google.com/open?id=1thIsyNeReOJq-vRdySqEVSYOmjwTEyZj)
 
 ### Conceitos aprendidos:
