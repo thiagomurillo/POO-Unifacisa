@@ -43,4 +43,5 @@ Arrays (inicialização, acessar valor, modificar valor, arrays multi-dimensiona
 Listas (wrappers, autoboxing e unboxing, performance).
 Encapsulamento (conceito e importância, modificadores: private, default ou package-private, protected, public).
 Reúso (composição, herança, sobrescrita).
-Exceções (try-catch-finally, hierarquia de Exceções, Exceções checked e unchecked)
+Exceções (try-catch-finally, hierarquia de Exceções, Exceções checked e unchecked).
+Testes Unitários com JUnit 4.
