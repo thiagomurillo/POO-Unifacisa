@@ -118,7 +118,7 @@ A seguir mostramos um código que compila mas que apresenta erro de execução:
 ```
 
 Embora o programador tenha avisado à JVM que está ciente da atribuição perigosa, ele não tomou todos os cuidados.
-Esta falta de cuidado resultou em uma exceção do tipo *ClassCastException*, que é não-checada por ser facilmente corrigida com um condicional if.
+Esta falta de cuidado resultou em uma exceção do tipo *ClassCastException*, que é não-checada por ser facilmente corrigida com um **condicional if e comando instanceof**.
 
 ```java
 	//por aqui tudo ok
@@ -126,3 +126,112 @@ Esta falta de cuidado resultou em uma exceção do tipo *ClassCastException*, qu
 	if(p instanceof Gerente)
 		Gerente g = (Gerente) p;	//compila e não lança exceção (pois nao entra no if)
 ```
+
+## Polimorfismo! :)
+
+Para falarmos de polimorfismo, devemos saber o que é sobrescrever um método.
+Você pode encontrar detalhes da sobrescrita [aqui](Reuso.md#sobrescrita)
+
+Em resumo, sobrescrita é uma técnica que só pode ser aplicada quando há herança.
+O que acontece é que uma função da superclasse que é herdade pela sub-classe pode ser reescrita, e ter um funcionamento diferente da superclasse.
+
+1. O polimorfismo pode acontecer sempre que existir herança e sobrescrita.
+2. O polimorfismo vai acontecer quando uma variável de referência mudar o objeto para onde ela aponta, e esse objeto tiver uma implementação diferente da superclasse.
+3. O objeto em si não é polimórfico, o que é polimórfico é a função que foi sobrescrita.
+
+Vamos ao exemplo:
+
+```java
+public class Pessoa {	
+	private String nome;
+	private int idade;
+	public Pessoa(){}
+	//demais funcoes
+}
+
+public class PessoaFisica extends Pessoa{
+	private int cpf;
+	//demais funcoes	
+}
+
+public class PessoaJuridica extends Pessoa{
+	protected String cnpj;
+	//demais funcoes	
+}
+
+public class Cliente extends PessoaFisica{
+	private long saldo;
+	private long limite;
+	//demais funcoes	
+}
+
+public class Funcionario extends PessoaFisica{
+	private int salario;	
+	protected double getBonificacao(){
+		return 0.1*this.salario;
+	}
+	//demais funcoes	
+}
+
+public class Secretario extends Funcionario{}
+
+public class Gerente extends Funcionario{
+	@Override
+	public double getBonificacao() {
+		return 0.2*super.getSalario();
+	}
+	//demais funcoes
+}
+```
+
+Note que, no exemplo acima, Funcionario tem uma função chamada *getBonificacao()*, que dá uma bonificação de 10% a todos os funcionários.
+Mas a classe Gerente sobrescreve *getBonificacao()*, dando aos gerentes 20% de bonificação.
+Portanto, a função getBonificacao() tem comportamento polimórfico, podendo retornar 10% ou 20%, dependendo de para qual objeto ela esteja apontando.
+
+Veja o exemplo a seguir:
+
+```java
+Gerente g = new Gerente("Bruna", 45, 4, 5000);
+Funcionario f = g;
+System.out.println(f.getBonificacao());
+```
+
+Nesse caso, apesar de chamarmos getBonificacao() de uma variável de referência de um Funcionário, a bonificação concedida seria de 20%, pois o objeto para o qual f aponta é um Gerente (e Gerente sobrescreveu getBonificacao()).
+
+Este comportamento polimórfico também podemos ver na classe ControleDeBonificacoes:
+
+```java
+class ControleDeBonificacoes {
+	private double totalDeBonificacoes = 0;
+
+	public void registra(Funcionario funcionario) {
+		this.totalDeBonificacoes += funcionario.getBonificacao();
+	}
+
+	public double getTotalDeBonificacoes() {
+		return this.totalDeBonificacoes;
+	}
+}
+```
+
+O que aconteceria no exemplo a seguir?
+
+```java
+ControleDeBonificacoes controle = new ControleDeBonificacoes();
+
+Gerente funcionario1 = new Gerente();
+funcionario1.setSalario(1000);
+controle.registra(funcionario1);
+
+Funcionario funcionario2 = new Funcionario();
+funcionario2.setSalario(1000);
+controle.registra(funcionario2);
+
+System.out.println(controle.getTotalDeBonificacoes());
+```
+
+*O que acontece se futuramente precisarmos criar outros tipos de funcionários?*
+
+Dicas: 
+1. **Não importa como nos referenciamos a um objeto, o método que será invocado é sempre o do objeto em questão.**
+2. **Programe sempre pra uma superclasse!** 
