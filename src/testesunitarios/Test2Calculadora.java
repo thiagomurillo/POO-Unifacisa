@@ -1,14 +1,14 @@
 package testesunitarios;
 
+import static org.junit.Assert.*;
+
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestCalculadora {
+public class Test2Calculadora {
 
 	private Calculadora calc;
 	private int a, b, c;
@@ -65,7 +65,7 @@ public class TestCalculadora {
 
 		System.out.println(num);
 
-		Assert.assertEquals(11.4, num, 0);
+		Assert.assertEquals(11.4, num, 0.0000001);
 	}
 
 	@Test(expected=FileNotFoundException.class)

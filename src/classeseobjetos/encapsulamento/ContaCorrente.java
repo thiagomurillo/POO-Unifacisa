@@ -1,5 +1,7 @@
 package classeseobjetos.encapsulamento;
 
+import classeseobjetos.encapsulamento.exceptions.ValorInvalidoException;
+
 public class ContaCorrente {
 	
 	private double limite;			//default ou package private
@@ -16,7 +18,10 @@ public class ContaCorrente {
 		this.cliente = cliente;
 	}
 	
-	public void depositar(double quantia) {
+	public void depositar(double quantia) throws ValorInvalidoException{
+		if(quantia <= 0)
+			throw new ValorInvalidoException("Tentativa de depósito da seguinte quantia: "+quantia);
+		
 		saldo += quantia;
 	}
 	
@@ -34,14 +39,19 @@ public class ContaCorrente {
 		//eh possivel transferir
 		double valor = debitar(quantia);
 		if(valor>0) {
-			conta2.depositar(valor);
+			try {
+				conta2.depositar(valor);
+			} catch (ValorInvalidoException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			return true;
 		}
 		
 		return false;		
 	}
 	
-	private boolean verificaRetirada(double quantia) {
+	protected boolean verificaRetirada(double quantia) {
 		if(quantia > 0 && quantia <= (saldo + limite)) 
 			return true;
 		else
