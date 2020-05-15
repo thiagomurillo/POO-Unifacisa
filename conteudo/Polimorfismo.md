@@ -235,3 +235,7 @@ System.out.println(controle.getTotalDeBonificacoes());
 Dicas: 
 1. **Não importa como nos referenciamos a um objeto, o método que será invocado é sempre o do objeto em questão.**
 2. **Programe sempre pra uma superclasse!** 
+
+______
+
+[Exercícios de Polimorfismo](exercicios/Polimorfismo.md)
