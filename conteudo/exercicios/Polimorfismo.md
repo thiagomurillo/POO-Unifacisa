@@ -19,8 +19,8 @@ Por exemplo:
 - emitirSom() de Cavalo deve exibir "Innnririririri"
 - emitirSom() de Preguica deve exibir "ZZzzzzZZZZzzzz"
 - correr() de Cachorro deve exibir "Cachorro correndo"
-- correr() de Cachorro deve exibir "Cavalo trotando"
-- escalarArvore() de Cachorro deve exibir "Nao"
+- correr() de Cavalo deve exibir "Cavalo trotando"
+- escalarArvore() de Preguica deve exibir "Nao"
 
 Crie uma classe Zoologico composta por 5 jaulas (lista), onde cada uma terá um animal diferente. 
 Depois percorra cada jaula e “cutuque o animal” (emitirSom) e, se o animal souber correr, dê uma carreira nele (correr). 
