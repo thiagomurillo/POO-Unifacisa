@@ -4,7 +4,7 @@ public class Funcionario extends PessoaFisica{
 
 	private int salario;	
 
-	protected double getBonificacao(){
+	public double getBonificacao(){
 		return 0.1*this.salario;
 	}
 	

@@ -1,10 +1,11 @@
 package polimorfismo;
 
-class ControleDeBonificacoes {
+public class ControleDeBonificacoes {
 	private double totalDeBonificacoes = 0;
 
-	public void registra(Funcionario funcionario) {
-		this.totalDeBonificacoes += funcionario.getBonificacao();
+	public void registraBonificacao(Funcionario f) {
+		//chamada a getBonificacao eh polimorfica
+		totalDeBonificacoes += f.getBonificacao();
 	}
 
 	public double getTotalDeBonificacoes() {

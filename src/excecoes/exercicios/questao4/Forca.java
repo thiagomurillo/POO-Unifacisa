@@ -37,8 +37,13 @@ public class Forca {
 		this.erros = 0;
 	}
 
-	public void tentarPalpite(char letra) {
+	public void tentarPalpite(char letra) throws JogoEncerradoException{
+		
+		if(getAcabou())
+			throw new JogoEncerradoException();
+		
 		boolean acertou = false;
+		//letrasSecretas = ['b', 'a', 'n']
 		for (int i = 0; i < this.letrasSecretas.length; i++) {
 			char letraSecreta = this.letrasSecretas[i];
 			if (letraSecreta == letra) {

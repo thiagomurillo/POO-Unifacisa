@@ -14,7 +14,7 @@ public class JogoForcaApp {
 		Forca jogo = new Forca(palavraSecreta);
 
 		LerPalpite(jogo);
-		while (true) {
+		while (!jogo.getAcabou()) {
 			LerPalpite(jogo);
 		}
 		ImprimirJogo(jogo);
