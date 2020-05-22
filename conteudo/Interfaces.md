@@ -67,4 +67,65 @@ De outro modo, se houvesse uma mudança, os milhares de programa iriam parar de 
 
 ## Interfaces e a "Herança múltipla" em Java
 
+No exercício de Polimorfismo, implementamos uma versão simplificada do MortalKombat.
+Ficamos com o seguinte diagrama de classes:
 
+<p align="center">
+  <img src="https://github.com/eduardolfalcao/POO-Unifacisa/blob/master/conteudo/imgs/mk2.png"/ width="650" height="550">
+</p>
+
+Uma coisa que alguém pode ter achado estranho, a princípio, é que todo lutador atira e lança magia.
+Socar e chutar é algo comum, mas não tenho certeza que todo lutador tem uma magia.
+
+Uma boa solução seria criar interfaces para esses comportamentos que são mais específicos.
+Desse modo, cada lutador poderia implementar cada interface, mas somente se ele de fato tiver aquela habilidade.
+
+<p align="center">
+  <img src="https://github.com/eduardolfalcao/POO-Unifacisa/blob/master/conteudo/imgs/mk2-interface.png"/ width="750" height="650">
+</p>
+
+Nesse caso, poderíamos ter uma classe implementando duas interfaces:
+
+```java
+class NightWolf extends Lutador implements Atirador, Bruxo{
+    //implementações da função atirar e lancar magia
+}
+```
+
+## Polimorfismo com Interfaces
+
+Antes de conhecermos interfaces, achávamos que polimorfismo só era possível com herança e sobrescrita.
+Na verdade, o requisito indispensável do polimorfismo é a sobrescrita.
+Quando estamos implementando interfaces, na verdade estamos temos que implementar as funções definidas na interface.
+Portanto, de algum modo, estamos reescrevendo a função (mesmo que antes ela não tivesse uma implementação).
+
+Aqui vai um exemplo de polimorfismo:
+
+```java
+class MortalKombatWitcher{
+    //construtor
+    public void atacar(Bruxo b1, Bruxo b2){
+      b1.lancarMagia(b2);
+    }
+}
+```
+
+Na classe acima, um MortalKombat só de bruxos, eu tenho certeza que b1 sabe lançar magia, pois ele é um bruxo.
+No entanto, não sei a princípio quanto de dando esse golpe irá desferir, pois eu não sei qual é o Bruxo exato que estará lançando magia.
+Poderia ser SubZero, Rayden, LiuKan, ou até mesmo o NightWolf.
+É possível descobrir o tipo específico do objeto com **instanceof**, assim como fizemos anteriormente com herança.
+
+## Interfaces não são Instanciáveis
+
+Nós jamais conseguiremos instanciar uma Interface.
+As interfaces não contém código funcional, portanto, não sabem executar funções, que é o principal objetivo de objetos.
+
+## Herança causa maior Acoplamento do que Interfaces 
+
+Com a herança nós herdamos código, e isto aumenta o acoplamento do nosso projeto.
+
+Com interfaces nós herdamos *responsabilidades* – as implementações dos métodos.
+Isto não gera tanto acoplamento quanto um código concreto. 
+Isto gera facilidade de manutenção porque as subclasses concretas da interface implementarão todos os métodos do contrato, e com isso nós podemos usar o polimorfismo a vontade.
+
+LEMBRE-SE: para isso, é importante que nós programemos para a superclasse (interface), assim podemos adicionar novas subclasses sem precisar mudar códigos de outras classes (isto é fraco acoplamento!).
