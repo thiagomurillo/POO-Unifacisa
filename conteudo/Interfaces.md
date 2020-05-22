@@ -23,8 +23,8 @@ E uma das formas de se fazer isto é usando **Interfaces**.
 
 ## Interfaces
 
-**Interfaces** são çomo uma espécie de *contrato*.
-Elas definem quais funções/métodos devem ser implementadas, mas não especificam como devem ser implementadas.
+**Interface** é como uma espécie de *contrato*.
+Elas **definem quais funções/métodos** devem ser implementadas, **mas não especificam como** devem ser implementadas.
 
 As interfaces, assim como os contratos, precisam ser minuciosamente pensadas e escritas.
 Isto é verdade pois contratos geram fortes vínculos, são difíceis de mudar ou de serem quebrados (pelo menos em teoria).
@@ -46,8 +46,25 @@ Aqui estão algumas das funções definidas no contrato de *List*:
 - int	size(): returns the number of elements in this list.
 
 As classes que implementam as interfaces são ditas classes que assinaram o contrato.
-As classes que assinam o contrato devem implementar todos os métodos do contrato, senão estarão quebrando o contrato, e assim o programa não compilará.
+As classes que assinam o contrato devem implementar todos os métodos do contrato, senão estariam quebrando o contrato, e assim o programa não compilaria.
 
- ![alt text](imgs/list-interface.png)
+<p align="center">
+  <img src="https://github.com/eduardolfalcao/POO-Unifacisa/blob/master/conteudo/imgs/list-interface.png"/ width="750" height="250">
+</p>
+
+No exemplo de List, todas as implementações (que também podem ser chamadas de subclasses) proveem uma implementação de todos os métodos do contrato: *add, clear, contains, equals, get, indexOf, isEmpty, lastIndexOf, remove, set, e size*.
+Já havíamos comentado na [aula sobre Lists](Listas.md#performance-arraylist-e-linkedlist) que o ArrayList e o LinkedList fazem as mesmas tarefas, mas de formas diferentes: o ArrayList usa um array por debaixo dos panos, e o LinkedList usa uma série de objetos encadeados, o que chamamos de lista encadeada.
+
+O que é interessante aqui é perceber que a Interface List existe desde os primórdios de Java (25 anos?).
+Imagina o que aconteceria se esquecessem de criar o método **remove**?
+Teríamos listas que apenas cresceriam...
+Mas isso não aconteceu, pois a criação da Interface List envolveu uma reflexão conjunta (diversos engenheiros de software) de todas as funções que seriam necessárias para Listas.
+De lá pra cá, essa interface nunca mudou. 
+De outro modo, se houvesse uma mudança, os milhares de programa iriam parar de compilar, pois não estariam respeitando a interface.
+
+É por este motivo, **o fato de interfaces serem entidades estáveis, que mudam pouco, ou não mudam,** que quando classes se relacionam com interfaces, as classes tem um acoplamento (pois é uma relação), mas esse **acoplamento com uma interface é considerado baixo**.
+
+
+## Interfaces e a "Herança múltipla" em Java
 
 
