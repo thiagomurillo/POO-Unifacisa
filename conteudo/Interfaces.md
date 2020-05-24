@@ -10,7 +10,7 @@ Uma  consequência disso são classes com poucas funções, e funções fáceis 
 
 **Acoplamento** é o grau com que uma classe conhece a outra.
 Isso gera dependência, o que é ruim, pois quando uma classe precisa ser alterada isso gera um efeito cascata de alteração de código nas classes dependentes.
-Duas formas comum de acoplamentos são a *composição* e a *herança*.
+Duas formas comuuns de acoplamentos são a *composição* e a *herança*.
 
 Um dos mantras do desenvolvimento OO é prezar pela **alta coessão e baixo acoplamento**
 
@@ -44,6 +44,30 @@ Aqui estão algumas das funções definidas no contrato de *List*:
 - boolean	remove(Object o): removes the first occurrence of the specified element from this list, if it is present.
 - E	set(int index, E element): replaces the element at the specified position in this list with the specified element.
 - int	size(): returns the number of elements in this list.
+
+Portanto, o código da interface List é mais ou menos assim:
+
+```java
+interface List<E>{
+  boolean add(E e);
+  void add(int index, E element);
+  void clear();
+  boolean contains(Object o);
+  boolean equals(Object o);
+  E get(int index);
+  int indexOf(Object o);
+  boolean isEmpty();
+  int lastIndexOf(Object o);
+  E remove(int index);
+  boolean remove(Object o);
+  E set(int index, E element);
+  int size();
+  //outra funçes
+}
+```
+
+Note que para definir uma interface, basta mudar o **class** por **interface**, e criar as funções sem o corpo do código.
+Além disso, interfaces só podem ter variáveis constantes (modificador **final**), ou seja, variáveis com valores defininidos que nunca mudam.
 
 As classes que implementam as interfaces são ditas classes que assinaram o contrato.
 As classes que assinam o contrato devem implementar todos os métodos do contrato, senão estariam quebrando o contrato, e assim o programa não compilaria.
@@ -114,6 +138,41 @@ Na classe acima, um MortalKombat só de bruxos, eu tenho certeza que b1 sabe lan
 No entanto, não sei a princípio quanto de dando esse golpe irá desferir, pois eu não sei qual é o Bruxo exato que estará lançando magia.
 Poderia ser SubZero, Rayden, LiuKan, ou até mesmo o NightWolf.
 É possível descobrir o tipo específico do objeto com **instanceof**, assim como fizemos anteriormente com herança.
+
+## Interfaces podem Herdar outras Interfaces
+
+Para promover um melhor reuso e facilitar até mesmo a aplicação do polimorfismo, interfaces podem herdar outras interfaces.
+Quando uma **interface A** herda uma **interface B**, o que acontece é que todas as funções existentes (mas não implementadas) em B passam a coexistir em A.
+É comum dizer que A herda as responsabilidades (funções) de B.
+Neste caso, uma classe qualquer que implementar a interface A deve fornecer implementações para os métodos definidos na interface A e na interface B.
+
+Um exemplo disso é a interface List.
+List herda da interface Collection.
+
+```java
+public interface Collection<E>{
+  int size();
+  boolean isEmpty();
+  boolean contains(Object o);
+  boolean add(E e);
+  boolean remove(Object o);
+  void clear();
+  boolean equals(Object o);
+  //outras funções
+}
+
+interface List<E> extends Collection<E>{
+  void add(int index, E element);
+  E get(int index);
+  int indexOf(Object o);
+  int lastIndexOf(Object o);
+  E remove(int index);
+  E set(int index, E element);
+  //outra funçes
+}
+```
+
+Note que as funções que já existiam em Collection são herdadas por List, mas não precisam aparecer de forma explícita na interface List.
 
 ## Interfaces não são Instanciáveis
 
