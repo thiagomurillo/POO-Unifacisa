@@ -174,10 +174,11 @@ interface List<E> extends Collection<E>{
 
 Note que as funções que já existiam em Collection são herdadas por List, mas não precisam aparecer de forma explícita na interface List.
 
-## Interfaces não são Instanciáveis
+## Alguns fatos sobre Interfaces
 
-Nós jamais conseguiremos instanciar uma Interface.
-As interfaces não contém código funcional, portanto, não sabem executar funções, que é o principal objetivo de objetos.
+1. **Nós jamais conseguiremos instanciar uma Interface**. As interfaces não contém código funcional, portanto, não sabem executar funções, que é o principal objetivo de objetos.
+2. Todos os métodos de uma interface são, por padrão, **abstract** (não tem corpo de função) e **public**.
+3. Variáveis de interfaces são por padrão **public**, **static** e **final**, ou seja, são constantes.
 
 ## Herança causa maior Acoplamento do que Interfaces 
 
