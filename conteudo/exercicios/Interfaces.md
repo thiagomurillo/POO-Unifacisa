@@ -27,11 +27,11 @@ Vamos implementar parte de um sistema para um Restaurante.
 5. Crie diferentes implementações de refeições.
 
 6. Crie uma classe **abstrata** chamada Bebida, que é um Item.
+     - construtor: recebe Tamanho e SaborBebida
      - tamanho: Tamanho       //variável
      - getTamanho(): Tamanho  //função concreta
-     - sabor: SaborBebida     //variável
-     - construtor: recebe Tamanho e SaborBebida
-     - *getSabor(): String*   //função abstrata     
+     - sabor: SaborBebida     //variável     
+     - getSabor(): SaborBebida   //função concreta     
      
 7. Crie um enum chamado Tamanho.
      - PEQUENO: não adiciona custo
