@@ -1,4 +1,4 @@
-# Exercícios sobre Interfaces (Introdução a Classes Abstratas)
+# Exercícios sobre Interfaces
 
 Vamos implementar parte de um sistema para um Restaurante.
 
@@ -6,7 +6,7 @@ Vamos implementar parte de um sistema para um Restaurante.
      - getPreco(): double
      - getDescricao(): String
 
-2. Crie a Interface Refeicao, que também é um Item.
+2. Crie a classe Refeicao, que também é um Item.
      - getProteina(): Proteina          //ENUM
      - getCarboidrato(): Carboidrato    //ENUM
 
@@ -24,40 +24,43 @@ Vamos implementar parte de um sistema para um Restaurante.
      - BATATA: adiciona custo de R$1
      - seja criativo, e crie os valores que você acha que poderia aparecer no cardápio
 
-5. Crie diferentes implementações de refeições.
-
-6. Crie uma classe **abstrata** chamada Bebida, que é um Item.
+5. Crie a classe Bebida, que é um Item.
      - construtor: recebe Tamanho e SaborBebida
      - tamanho: Tamanho       //variável
      - getTamanho(): Tamanho  //função concreta
      - sabor: SaborBebida     //variável     
      - getSabor(): SaborBebida   //função concreta     
      
-7. Crie um enum chamado Tamanho.
+6. Crie um enum chamado Tamanho.
      - PEQUENO: não adiciona custo
      - MEDIO: adiciona custo de R$2
      - GRANDE: adiciona custo de R$2.8
  
-8. Crie um enum chamado SaborBebida.
+7. Crie um enum chamado SaborBebida.
      - seja criativo, e crie os valores que você acha que poderia aparecer no cardápio
      - ex: coca, guarana, suco de laranja, agua com gas, cerveja, whisky, etc.
 
-9. Crie diferentes implementações de Bebidas.
+8. Crie uma classe chamada Cardapio com diferentes opções de Refeições e Bebidas.
+     - crie a função getRefeicoes(): List<Refeicao>
+     - crie a função getBebidas(): List<Bebidas>
+     - crie a função getCardapio(): List<Item>
 
-10. Crie a classe Cliente.
-    - nome: String
+9. Crie a classe Cliente.
     - mesa: int
-    - pedidos: List<Item>
+    - getMesa(): int
+    - adicionarPedido(Item): void
+    - removerPedido(Item): void
+    - getConta(): double
     
 11. Crie a classe SistemaRestaurante.
     - métodos:
-        - adicionarCliente(Cliente): void
-        - adicionarPedido(Cliente, Item): void
+        - adicionarCliente(Cliente c): void
+        - adicionarPedido(int mesa, Item i): void
             - pode lancar ClienteInexistenteException
-        - removerPedido(Cliente, Item): void
+        - removerPedido(int mesa, Item i): void
             - pode lancar PedidoInexistenteException
-        - computarPagamentoCliente(Cliente): double
-        - receberPagamentoCliente(Cliente,double): void
+        - computarPagamentoCliente(int mesa): double
+        - receberPagamentoCliente(int mesa, double pagamento): void
             - pode lancar PagamentoInvalidoException
 
-12. Criar testes para Sistema Restaurante.
+12. Criar testes para Cliente e SistemaRestaurante.
