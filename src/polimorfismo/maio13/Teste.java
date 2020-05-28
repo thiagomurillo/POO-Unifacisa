@@ -5,7 +5,7 @@ import polimorfismo.Funcionario;
 import polimorfismo.Gerente;
 import polimorfismo.Pessoa;
 import polimorfismo.Secretario;
-import polimorfismo.ControleDeBonificacoes;
+import polimorfismo.SistemaInterno;
 
 public class Teste {
 
@@ -60,7 +60,7 @@ public class Teste {
 		/**
 		 * Polimorfismo exemplo 2!
 		 */
-		ControleDeBonificacoes cdb = new ControleDeBonificacoes();
+		SistemaInterno cdb = new SistemaInterno();
 		Secretario s = new Secretario();
 		s.setSalario(1000);
 		Gerente gerente = new Gerente();

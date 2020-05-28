@@ -14,9 +14,9 @@ public class Lutador {
 		return "Lutador: "+nome+", vida: "+vida;
 	}
 	
-	public void socar(Lutador oponente) {
-		oponente.vida -= 5;
-		System.out.println(nome+" acabou de socar "+ oponente.nome);
+	//retornar o dano
+	public int socar() {
+		return 5;
 	}
 	
 	public void chutar(Lutador oponente) {

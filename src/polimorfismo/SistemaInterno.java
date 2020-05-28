@@ -1,6 +1,6 @@
 package polimorfismo;
 
-public class ControleDeBonificacoes {
+public class SistemaInterno {
 	private double totalDeBonificacoes = 0;
 
 	public void registraBonificacao(Funcionario f) {
@@ -10,5 +10,9 @@ public class ControleDeBonificacoes {
 
 	public double getTotalDeBonificacoes() {
 		return this.totalDeBonificacoes;
+	}
+	
+	public boolean login(Autenticavel a, int senha) {
+		return a.autentica(senha);
 	}
 }

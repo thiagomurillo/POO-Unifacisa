@@ -12,7 +12,7 @@ public class Polimorfismo {
 		System.out.println(funcionario.getBonificacao());
 		
 		
-		ControleDeBonificacoes controle = new ControleDeBonificacoes();
+		SistemaInterno controle = new SistemaInterno();
 
 		Gerente funcionario1 = new Gerente();
 		funcionario1.setSalario(1000);

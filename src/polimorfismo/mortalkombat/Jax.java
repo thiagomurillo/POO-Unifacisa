@@ -7,9 +7,8 @@ public class Jax extends Lutador{
 	}
 	
 	@Override
-	public void socar(Lutador oponente) {
-		super.socar(oponente);	//tirando 7 de life
-		oponente.vida -= 10;	//tirando mais 10 de life		
+	public int socar() {
+		return super.socar() + 10;			
 	}
 
 }

@@ -16,6 +16,8 @@ public class MortalKombat {
 			//sorteia golpe
 			//realiza golpe; polimorfismo acontece aqui
 			
+			l1.socar();
+			
 			//pomeos colocar prints adicionais aqui
 		}
 	}

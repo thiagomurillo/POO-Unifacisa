@@ -2,8 +2,16 @@ package classeseobjetos.encapsulamento.spotify;
 
 public class Musica {
 	
-	public enum Genero { SAMBA, PAGODE, FOLK, ROCK, FORRO, MPB, OUTROS; }
-	
+	public enum Genero {
+		SAMBA(5.2), PAGODE(8.0), FOLK(9.0), ROCK(3.0), FORRO(3.0), MPB(8.3), OUTROS(3.0);
+		private double value;
+		
+		private Genero(double value) {
+			this.value = value;
+		}
+		 
+	}
+		
 	private String nome, artista;
 	private Genero genero;
 	private short ano, duracao;
