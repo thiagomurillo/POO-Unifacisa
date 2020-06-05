@@ -62,8 +62,17 @@ Classes abstratas, diferentemente de interfaces, podem ter variáveis de instân
 - Classes: colocar **abstract** antes de *class*.
 - Funções: colocar **abstract** antes do *tipo de retorno da função*.
 
+## Construtores
+
+Apesar de não poder ser instanciada, Classes abstratas têm construtores.
+Isso acontece pelo fato de uma instanciação de uma de suas sub-classes chamarem os construtores da superclasse de forma encadeada até chegar a Object.
+
 ## Como são os relacionamentos?
 
 - Classes abstratas **implements** interfaces
 - Classes abstratas **extends** classes abstratas
 - Classes concretas **extends** classes abstratas
+
+---
+
+[Exercícios de Classes Abstratas](exercicios/ClassesAbstratas.md)
