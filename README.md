@@ -33,6 +33,8 @@ Repositório contendo conceitos e exemplos de programas com orientação a objet
 
 [10 - Interfaces](conteudo/Interfaces.md).
 
+[11 - Classes Abstratas](conteudo/ClassesAbstratas.md).
+
 [Provas - Unidade I](https://drive.google.com/open?id=1thIsyNeReOJq-vRdySqEVSYOmjwTEyZj)
 
 
@@ -51,3 +53,6 @@ Encapsulamento (conceito e importância, modificadores: private, default ou pack
 Reúso (composição, herança, sobrescrita).
 Exceções (try-catch-finally, hierarquia de Exceções, Exceções checked e unchecked).
 Testes Unitários com JUnit 4.
+Polimorfismo.
+Interfaces.
+Classes Abstratas.
