@@ -16,7 +16,7 @@
     - Crie uma classe concreta chamada Quadrado, que é um Quadrilátero
     - Crie uma classe concreta chamada Retangulo, que é um Quadrilátero
     - Crie uma classe concreta chamada Trapezio, que é um Quadrilátero (pode passar altura do trapézio como argumento extra no construtor)
-    - Crie uma classe abstrata chamada Círculo, que é uma Figura. 
+    - Crie uma classe concreta chamada Círculo, que é uma Figura. 
         - Variáveis:
             - raio : double
 
@@ -39,7 +39,6 @@
         - Crie uma classe concreta chamada ContaCorrente.
             - Custo de 0.25% do valor a ser transferido, se valor for menor do que R$5000.
             - Custo fixo de R$15 para valores iguais ou superiores à R$5000. 
-            - Lance SaldoInsuficienteException nos casos em que o cliente não tiver o valor somado ao custo de transferência
     - Crie testes unitários para ContaPoupanca e ContaCorrente
     
     
