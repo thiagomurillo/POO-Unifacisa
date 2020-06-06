@@ -31,8 +31,9 @@
             - getNome(): String
             - getSaldo(): double 
         - Funções abstratas:
-            - transferir(double valor, Conta conta): void
+            - transferir(String senha, double valor, Conta conta): void
             - transferir lança SaldoInsuficienteException
+            - transferir lança SenhaInvalidaException
         - Crie uma classe concreta chamada ContaPoupanca.
             - Custo fixo de R$5 para transferência. 
         - Crie uma classe concreta chamada ContaCorrente.
